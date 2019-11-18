@@ -1,15 +1,24 @@
-.messageBox {
+.messageBoxR {
    background: #F3F3F3;
-   border-radius: 20px;
-   padding: 5px 20px;
+   border-radius: 20px 20px 0px 20px;
+   padding: 2px 20px;
    color: white;
    display: inline-block;
    max-width: 80%;
  }
- 
+
+ .messageBoxL {
+  background: #F3F3F3; 
+  border-radius: 20px 20px 20px 0px;
+  padding: 2px 20px;
+  color: white;
+  display: inline-block;
+  max-width: 80%;
+}
  .messageText {
    width: 100%;
    letter-spacing: 0;
+   height:auto;
    float: left;
    font-size: 1.1em;
    word-wrap: break-word;
@@ -63,5 +72,5 @@
  }
  
  .backgroundLight {
-   background: #F3F3F3;
+   background: rgb(204, 201, 201);
  }

@@ -15,7 +15,7 @@ const TextContainer = ({ users }) => (
       users
         ? (
           <div>
-            <h1>People currently in Room:</h1>
+            <h1>People currently in Room &nbsp;-&nbsp; {users.length}</h1>
             <div className="activeContainer">
               <h2>
                 {users.map(({name}) => (

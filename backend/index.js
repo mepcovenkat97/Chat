@@ -2,6 +2,14 @@ const express = require('express');
 const socketio = require('socket.io');
 const http = require('http');
 
+require("dotenv").config();
+const config = require("config")
+const morgan = require("morgan")
+const cors = require("cors")
+const bodyParser = require("body-parser");
+
+const MONGO_CONNECTION = config.get("db.connection-string")
+
 const { addUser, removeUser, getUser, getUserInRoom } = require('./users')
 
 const PORT = process.env.PORT || 5000;
@@ -10,14 +18,11 @@ const router = require('./router')
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server);
+const io = socketio(server)
 
-
-
-//io.setTimeout(5000,function(){ socket.end('disconnecting client...');});
+// Socket 
 io.on('connection', (socket) => {
 
-   //io.setTimeout(5000,function(){ socket.end('disconnecting client...');});
    socket.on('join',({ name, room}, callback) => {
       const { error, user } = addUser({ id: socket.id, name, room});//
       if(error) return callback(error);
@@ -63,6 +68,7 @@ io.on('connection', (socket) => {
 
 app.use(router);
 
-server.listen(PORT, () => {
+
+server.listen(PORT, () => {   
    console.log(`Server started on port ${PORT}`)
 })

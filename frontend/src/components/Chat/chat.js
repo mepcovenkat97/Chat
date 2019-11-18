@@ -42,7 +42,6 @@ const Chat = ({ location }) => {
    //[ENDPOINT, location.search] - indicates useEffect will render only if there is a change in these values
 //
    useEffect(() => {
-      let flag = 1 ;
       socket.on('message', (message)=> {
          setMessages([...messages,message])
       })

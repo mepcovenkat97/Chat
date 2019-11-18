@@ -12,6 +12,10 @@
    align-items: center;
    margin-bottom: 50%;
  }
+
+ h2{
+   padding-left:75px;
+ }
  
  .activeItem {
    display: flex;

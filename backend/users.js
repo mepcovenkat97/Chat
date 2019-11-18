@@ -16,8 +16,6 @@ const addUser = ({ id, name, room}) => {
       const user = { id, name, room };
       //console.log(user)
       users.push(user);
-      // const newUser = new User(name);
-      // newUser.save();
 
       return { user };
 }

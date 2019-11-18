@@ -17,13 +17,19 @@ html, body {
    justify-content: center;
    text-align: center;
    height: 100vh;
+  
    align-items: center;
    background-color: #1A1A1D;
  }
  
  .joinInnerContainer {
-   width: 20%;
+  border: white;
+  border-width: 1px;
+  border-style: solid;
+  padding:15px;
+   width: 25%;
  }
+
  
  .joinInput {
    border-radius: 0;
@@ -34,6 +40,7 @@ html, body {
  .heading {
    color: white;
    font-size: 2.5em;
+   margin-top:10px;
    padding-bottom: 10px;
    border-bottom: 2px solid white;
  }
