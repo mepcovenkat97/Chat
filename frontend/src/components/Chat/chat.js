@@ -19,7 +19,7 @@ const Chat = ({ location }) => {
    const [users, setUsers] = useState('');
    const [messages, setMessages] = useState([]);
    const [message, setMessage] = useState('');
-   const ENDPOINT = 'localhost:5000';
+   const ENDPOINT = 'https://crayond-chat-application.herokuapp.com/';
 
    //useEffect - similar to componentDidMount but will render all the times (similar to combining all the ComponentDid...() functions)
    useEffect(()=>{
