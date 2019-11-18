@@ -6,7 +6,8 @@ A simple Chat Room app build using __React__ and __Node__
 
 See the live running app here - [Chat](https://5dd28f7334bd6a4711790455--romantic-goldberg-57dff2.netlify.com/)
 
-#### Setup</br>
+# Installation #
+
 ##### Backend
 1. Inside the project folder ``` chat ``` 
 ```
@@ -18,7 +19,7 @@ npm i
 ```
 nodemon index.js
 ```
-
+# #
 ##### Front-end
 1. Inside the project folder ``` chat ```
 ```
@@ -30,6 +31,9 @@ npm i
 npm start
 ```
 3. Browse the URL __localhost:3000__ in the browser
+# #
+
+### ScreenShots
 
 ## Join
 ![screenshot](pics/Join.png)
