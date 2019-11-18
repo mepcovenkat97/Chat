@@ -4,31 +4,6 @@ const http = require('http');
 
 const cors = require("cors");
 
-/*const firebase = require("firebase");
-//import * as firebase from "firebase/app";
-//import "firebase/firebase-messaging";
-
-var firebaseConfig = {
-   apiKey: "AIzaSyCF7eYshStXGZwPOJU07xmsJU1wO96NKrY",
-  authDomain: "push-notification-24b57.firebaseapp.com",
-  databaseURL: "https://push-notification-24b57.firebaseio.com",
-  projectId: "push-notification-24b57",
-  storageBucket: "push-notification-24b57.appspot.com",
-  messagingSenderId: "366260936896",
-  appId: "1:366260936896:web:e85b7b97b5c64cad48cd25",
-  measurementId: "G-X0ZH0NNMRS",
-}
-firebase.initializeApp(firebaseConfig);
-
-const messaging = firebase.messaging();
-messaging.requestPermission()
-.then(function(token){
-   console.log(token);
-})
-.catch(function(){
-   console.log("");
-})*/
-
 const { addUser, removeUser, getUser, getUserInRoom } = require('./users')
 
 const PORT = process.env.PORT || 5000;
