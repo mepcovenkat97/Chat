@@ -4,6 +4,7 @@ const http = require('http');
 
 const cors = require("cors");
 
+
 const { addUser, removeUser, getUser, getUserInRoom } = require('./users')
 
 const PORT = process.env.PORT || 5000;
@@ -15,6 +16,7 @@ const server = http.createServer(app);
 const io = socketio(server)
 
 // Socket 
+var time;
 io.on('connection', (socket) => {
 
    socket.on('join',({ name, room}, callback) => {
@@ -30,7 +32,7 @@ io.on('connection', (socket) => {
       callback();
    })
 
-   let time;
+   //var time;
    socket.on('sendMessage',(message, callback) => {
       const user = getUser(socket.id);
       io.to(user.room).emit('message',{ user:user.name, text:message});

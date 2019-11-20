@@ -25,7 +25,7 @@ const TextContainer = ({ users }) => (
                   </div>
                 ))}
               </h2>
-            </div>
+            </div> 
           </div>
         )
         : null
