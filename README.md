@@ -33,6 +33,11 @@ npm start
 3. Browse the URL __localhost:3000__ in the browser
 # #
 
+## Using with Docker
+1. Clone the repo
+2. Do Docker-compose up
+
+# #
 ### ScreenShots
 
 ## Join
